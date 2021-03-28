@@ -23,10 +23,6 @@ class KafkaStreaming:
 			conn.commit()
 
 	def pyspark_consume_data(self):
-		# conf = SparkConf().set("spark.python.profile", "true").set("spark.io.compression.codec",
-		# 														   "snappy")  # .setMaster('local[*]')
-		# conf.setAppName('kafka-spark')
-
 		# Spark context details
 		sc = SparkContext(appName="PythonSparkStreamingKafka")
 		ssc = StreamingContext(sc, 5)
