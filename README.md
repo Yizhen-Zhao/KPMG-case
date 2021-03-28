@@ -97,6 +97,8 @@ to setup spark env.
 Here are the steps to start and validate the project. Starting the necessary services and executing data processing job, finally check 
 if data exist in database.
 
+Here is a project demo I made to show how to start this project, you can find the video[here](#https://drive.google.com/file/d/1kex62GmdBnY_ThdBs7Xg-QAC7-Js6kvn/view?usp=sharing). 
+
 
 #### Start Kafka, Zookeeper, Mysql servers
 First we need to start those services, we use `docker-compose up` to help us start all services.
