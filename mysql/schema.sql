@@ -1,5 +1,5 @@
 -- This file is used to create target database
--- Target database: dash_db
+-- Target database: kpmg
 
 create database kpmg default character set utf8 collate utf8_general_ci;
 
