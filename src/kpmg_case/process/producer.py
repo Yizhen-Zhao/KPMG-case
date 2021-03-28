@@ -1,14 +1,19 @@
 import os
 from pathlib import Path
 import json
-from kafka import KafkaProducer, KafkaClient
+from kafka import KafkaProducer
 
 
 class Producer:
 	def __init__(self):
 		self.producer = KafkaProducer(bootstrap_servers=['localhost:9092'])
+		self.topic_name = "kpmg_topic"
 
 	def load_data_to_topic(self):
+		"""Load data from sample_data.json
+		and send to Kafka topic line by line
+		"""
+
 		data_path = os.path.join(
 			Path(__file__).parents[3],
 			f"data/sample_data.json",
@@ -17,7 +22,7 @@ class Producer:
 			data = json.load(f)
 			for k in data:
 				self.producer = KafkaProducer(value_serializer=lambda v: json.dumps(v).encode('utf-8'))
-				self.producer.send("kpmg_topic", data[k])
+				self.producer.send(self.topic_name, data[k])
 				self.producer.flush()
 				print("message sent")
 

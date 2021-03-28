@@ -12,6 +12,8 @@ class KafkaStreaming:
 
 	@staticmethod
 	def _wordcount(line):
+		"""Read data line by line and count words
+		"""
 		line = line.collect()
 		for word in line:
 			print(word, len(word.split(" ")))
@@ -23,6 +25,9 @@ class KafkaStreaming:
 			conn.commit()
 
 	def pyspark_consume_data(self):
+		"""Start spark streaming job and consume data in Kafka topic,
+		count words for each line of data and finally write to Mysql database
+		"""
 		# Spark context details
 		sc = SparkContext(appName="PythonSparkStreamingKafka")
 		ssc = StreamingContext(sc, 5)
