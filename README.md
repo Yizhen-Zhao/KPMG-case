@@ -1,11 +1,11 @@
-# KPMG Case Study
+# Kafka + Spark Streaming Data Processing
 
-This repo is for KPMG case study - data challenge
+Simple case study of using Kafka and Spark to do some data processing
 
 Table of Contents
 =================
 
-   * [kpmg-case-study](#kpmg-case-study)
+   * [case-study](#case-study)
       * [Table of Contents](#table-of-contents)
       * [Case Requirements](#case-requirements)
       * [Project Status](#project-status)
@@ -48,10 +48,10 @@ Make a Docker container setup that provides a data processing service using a cl
 ### Project structure
 
 ```
-|-- KPMG-case
+|-- case-study
     |-- data
     |-- src
-        |-- kpmg_case
+        |-- case_study
             |-- process
                 |-- producer.py
                 |-- consumer.py
@@ -96,9 +96,6 @@ to setup spark env.
 ### Development
 Here are the steps to start and validate the project. Starting the necessary services and executing data processing job, finally check 
 if data exist in database.
-
-Here is a project demo I made to show how to start this project, you can find the video [here](https://drive.google.com/file/d/1kex62GmdBnY_ThdBs7Xg-QAC7-Js6kvn/view?usp=sharing). 
-
 
 #### Start Kafka, Zookeeper, Mysql servers
 First we need to start those services, we use `docker-compose up` to help us start all services.
