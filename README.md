@@ -77,7 +77,7 @@ Then `producer.py` script read data from `sample_data.json` and send data into K
 Next in `consumer.py` we use pyspark to consume data in Kafka topic and do some transformation (i.e. word count).
 Finally, write the processed data into MySQL database.
 
-![alt text](./data/KPMG_case.png?raw=true)
+![alt text](./data/case_study.png?raw=true)
 ### Requirements
 
 Needed packages:
